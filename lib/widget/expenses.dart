@@ -1,4 +1,4 @@
-import 'package:expense_tracker/main.dart';
+import 'package:expense_tracker/widget/chart/chart.dart';
 import 'package:expense_tracker/widget/expenses_list.dart';
 import 'package:expense_tracker/widget/new_expense.dart';
 import 'package:flutter/material.dart';
@@ -80,12 +80,12 @@ class _ExpensesState extends State<Expenses> {
           IconButton(
             onPressed: _openAddExpenseOverlay,
             icon: const Icon(Icons.add),
-            color: Colors.black,
+            color: Colors.white,
           )
         ],
       ),
       body: Column(children: [
-        const Text('The Chart'),
+        Chart(expenses: _registeredExpenses),
         Expanded(
           child: mainContent,
         )
